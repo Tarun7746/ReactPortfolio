@@ -50,33 +50,6 @@ const Header = () => {
 
   return (
     <>
-      <div>
-        <nav className="custom-navbar">
-          <div className="container">
-            <Link to="/" className="logo">
-              Tarun
-            </Link>
-            <ul className="nav">
-              <li className="item">
-                <Link to="#home" className="link">
-                  Home
-                </Link>
-              </li>
-              <li className="item">
-                <Link to="#about" className="link">
-                  About
-                </Link>
-              </li>
-              {/* Add more menu items here */}
-            </ul>
-            <a className="hamburger hamburger--elastic">
-              <div className="hamburger-box">
-                <div className="hamburger-inner"></div>
-              </div>
-            </a>
-          </div>
-        </nav>
-      </div>
       {/*page header */}
       <header class="header">
         <div class="overlay"></div>

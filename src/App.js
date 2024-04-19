@@ -1,5 +1,6 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
-import "./components/css/Home.css";
+// import "./components/css/Home.css";
+import "./components/css/IndexHome.scss";
 import IndexHome from "./components/IndexHome";
 import Header from "./components/Header";
 
