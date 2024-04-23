@@ -9,35 +9,9 @@ import { saveAs } from "file-saver";
 import "./css/service.scss";
 import Service from "./Service";
 import { useEffect } from "react";
+import FooterHome from "./FooterHome";
 
 const IndexHome = () => {
-  const services = [
-    {
-      title: "Adipisicing",
-      subtitle:
-        "Labore velit culpa adipisci excepturi consequuntur itaque in nam molestias dolorem iste quod.",
-      icon: pencilIcon,
-    },
-    {
-      title: "Sapiente",
-      subtitle:
-        "Labore velit culpa adipisci excepturi consequuntur itaque in nam molestias dolorem iste quod.",
-      icon: ResponsiveIcn,
-    },
-    {
-      title: "Placeat",
-      subtitle:
-        "Labore velit culpa adipisci excepturi consequuntur itaque in nam molestias dolorem iste quod.",
-      icon: ToolBoxSvg,
-    },
-    {
-      title: "Iusto",
-      subtitle:
-        "Labore velit culpa adipisci excepturi consequuntur itaque in nam molestias dolorem iste quod.",
-      icon: AnaLaticSvg,
-    },
-  ];
-
   //resume Download
   const handleDownloadCV = () => {
     const pdfUrl = { AboutPic };
@@ -46,64 +20,6 @@ const IndexHome = () => {
       .then((blob) => saveAs(blob, "resume.pdf"))
       .catch((error) => console.error("Error downloading PDF:", error));
   };
-  let services_text = [
-    {
-      icon: "computerIcon",
-      // imgSrc: computerIcon,
-      title: "Computer lab",
-      description:
-        "ICM Bhopal boasts a modern computer lab equipped with i5 and i7 computers, LAN, internet, multimedia projector, and latest software, facilitating practical training for Cooperative personnel. The lab, located in a separate cabin, accommodates 28 computers with comfortable seating.",
-    },
-    {
-      icon: "LibIconIcon",
-      // imgSrc: LibIcon,
-      title: "Library",
-      description:
-        "The Institute has well structured library having more than 14 thousand books on different areas of Management, Law, Fiction, Literature, Commerce and Information technology. The Institute has A  exclusive collection of books on cooperative Management, Law, Accounts and Audit.",
-    },
-    {
-      icon: "traningIcon",
-      // imgSrc: traningIcon,
-      title: "Classrooms",
-      description:
-        "Institute has an independent administrative block spread over 152 Sq Metrs. The institute has 134 sq Metres.(AC) conference hall with seating capacity of 80 persons, 5 AC class rooms, with  Enhanced video conference facility for administrative and training purpose.",
-    },
-    {
-      icon: "computerIcon",
-      // imgSrc: LeaningIcon,
-      title: "Leaning Centre",
-      description:
-        "The Learning Center at ICM Bhopal has a modern computer lab with i5 and i7 computers, LAN and internet access, multimedia projectors, and advanced software for hands-on training. The lab, with 28 computers, is specially designed for Cooperative personnel.",
-    },
-    {
-      icon: "LibIconIcon",
-      // imgSrc: LibIcon,
-      title: "Webinars",
-      description:
-        "The focal point of our webinar Rest highlight the Learning Center at ICM Bhopal, which houses an advanced computer lab equipped with i5 and i7 computers, LAN connectivity, Internet accessibility, Multimedia projectors, and state-of-the-art software.This setup helps us in facilitating interactive training sessions.",
-    },
-    {
-      icon: "traningIcon",
-      // imgSrc: traningIcon,
-      title: "Seminar",
-      description:
-        "We regularly host seminars to showcase the Learning Hub at ICM Bhopal, a cutting-edge computer facility tailored for interactive training of Cooperative personnel. With 28 workstations, it provides ample resources for effective learning experiences.",
-    },
-    {
-      icon: "traningIcon",
-      // imgSrc: traningIcon,
-      title: "Conferences",
-      description:
-        "The forthcoming conference offers a proficient platform for industry leaders to converge and exchange insights. Attendees can anticipate engaging discussions, informative sessions, and valuable networking opportunities. Join us as we collectively strive towards advancing our fields In fostering meaningful collaborations.",
-    },
-    {
-      icon: "traningIcon",
-      // imgSrc: StudyIcon,
-      title: "Study Materia",
-      description:
-        "Study materials provide an effective way for gather and discuss vital insights. Attendees can anticipate thought-provoking conversations and chances to make valuable relationships. increase your knowledge. Reserve your spot right away to participate in group discovery and enhance your educational experience.",
-    },
-  ];
 
   useEffect(() => {
     const items = document.querySelectorAll(".timeline li");
@@ -286,10 +202,7 @@ const IndexHome = () => {
           <ul>
             <li>
               <div>
-                <time>1934</time> At vero eos et accusamus et iusto odio
-                dignissimos ducimus qui blanditiis praesentium At vero eos et
-                accusamus et iusto odio dignissimos ducimus qui blanditiis
-                praesentium
+                <time>Education</time> <label>2023 -Current</label>{" "}
               </div>
             </li>
             <li>
@@ -375,6 +288,8 @@ const IndexHome = () => {
       <div className="row m-0">
         <Service />
       </div>
+
+      <FooterHome />
     </div>
   );
 };

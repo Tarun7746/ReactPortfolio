@@ -5,6 +5,7 @@ import "./App.css";
 import "./components/css/service.scss";
 import IndexHome from "./components/IndexHome";
 import Header from "./components/Header";
+import FooterHome from "./components/FooterHome";
 
 // import NavbarHead from "./components/NavbarHead";
 
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<IndexHome />} />
           <Route path="/header" element={<Header />} />
+          <Route path="/footer" element={<FooterHome />} />
 
           {/* <Route path="/tesing" element={<NavbarHead />} /> */}
         </Routes>
