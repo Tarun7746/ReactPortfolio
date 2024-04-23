@@ -3,6 +3,7 @@ import "./components/css/Navbar.scss";
 import "./components/css/IndexHome.scss";
 import "./App.css";
 import "./components/css/service.scss";
+
 import IndexHome from "./components/IndexHome";
 import Header from "./components/Header";
 import FooterHome from "./components/FooterHome";
