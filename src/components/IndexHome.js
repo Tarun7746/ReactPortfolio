@@ -1,10 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import AboutPic from "../assets/imgs/man.png";
-import ResponsiveIcn from "../assets/imgs/responsive.svg";
-import pencilIcon from "../assets/imgs/pencil-case.svg";
-import ToolBoxSvg from "../assets/imgs/toolbox.svg";
-import AnaLaticSvg from "../assets/imgs/analytics.svg";
+
 import { saveAs } from "file-saver";
 import "./css/service.scss";
 import Service from "./Service";
@@ -103,128 +100,38 @@ const IndexHome = () => {
       {/*---Service----*/}
 
       <div className="CenterSection">
-        {/* <div class="container pt-5">
-          <div class="row">
-            <div class="col-md-6 wow fadeInRight">
-              <h2 class="fw-normal">Education</h2>
-              <ul class="timeline mt-4 pr-md-5">
-                <li>
-                  <div class="title">2023 -Current</div>
-                  <div class="details">
-                    <h5>Masters of Technology</h5>
-                    <small class="fg-theme"> Rgpv bhopal</small>
-                    <small class="fg-theme2">
-                      Computer Science & Engineering
-                    </small>
-                    <p>
-                      M.Tech graduate with specialized knowledge & Proficient in
-                      Programing. Dedicated to applying technical expertise for
-                      innovative solutions.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">2019 -2023</div>
-                  <div class="details">
-                    <h5>Bachelor of Technology</h5>
-                    <small class="fg-theme">Sirte Bhopal</small>
-                    <small class="fg-theme2">
-                      Computer Science & Engineering
-                    </small>
-                    <p>
-                      With a high CGPA and a solid foundation in software
-                      development, coding, and networking, coupled with
-                      extensive knowledge in web development, I bring a
-                      well-rounded skill set to my role at a web design company.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">2018 -12th</div>
-                  <div class="details">
-                    <h5>Physics Chemistry and Maths</h5>
-                    <small class="fg-theme">Nalanda Public School</small>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="col-md-6 wow fadeInRight" data-wow-delay="200ms">
-              <h2 class="fw-normal">Experience</h2>
-              <ul class="timeline mt-4 pr-md-5">
-                <li>
-                  <div class="title">2024 - Current</div>
-                  <div class="details">
-                    <h5>Triosoft Technology Pvt. Ltd.</h5>
-                    <small class="fg-theme">January 2024</small>
-                    <small class="fg-theme2">Web developer</small>
-                    <p>
-                      As a web developer at Triosoft, I navigate through diverse
-                      coding languages and frameworks, crafting innovative
-                      solutions for optimal web development.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">2023</div>
-                  <div class="details">
-                    <h5>Umpteen Innovation Pvt. Ltd.</h5>
-                    <small class="fg-theme"> November - december </small>
-                    <small class="fg-theme2">Web developer</small>
-
-                    <p>
-                      In my role at a web design company, I specialize in
-                      creating captivating web pages and engaging in the art of
-                      web design to deliver visually and user-friendly online
-                      experiences.
-                    </p>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">2023</div>
-                  <div class="details">
-                    <h5>Agnito Technology Pvt. Ltd.</h5>
-                    <small class="fg-theme">December 2023</small>
-                    <small class="fg-theme2">Salesforce Developer </small>
-                    <p>
-                      As a Salesforce Developer at Agnito, I specialize in
-                      crafting tailored solutions using Apex, Visualforce, and
-                      Lightning components. I contribute to optimizing CRM
-                      functionalities.
-                    </p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div> */}
-
         <section class="timeline">
           <ul>
             <li>
-              <div>
-                <time>Education</time> <label>2023 -Current</label>{" "}
+              <div className="Educa">
+                <p>
+                  {" "}
+                  <time>Education</time> <label>2023 -Current</label>{" "}
+                </p>
               </div>
             </li>
             <li>
-              <div>
-                <time>1937</time> Proin quam velit, efficitur vel neque vitae,
-                rhoncus commodo mi. Suspendisse finibus mauris et bibendum
-                molestie. Aenean ex augue, varius et pulvinar in, pretium non
-                nisi.
+              <div className="Educa">
+                <p>
+                  {" "}
+                  <time>Education</time> <label>2023 -Current</label>{" "}
+                </p>
               </div>
             </li>
             <li>
-              <div>
-                <time>1940</time> Proin iaculis, nibh eget efficitur varius,
-                libero tellus porta dolor, at pulvinar tortor ex eget ligula.
-                Integer eu dapibus arcu, sit amet sollicitudin eros.
+              <div className="Educa">
+                <p>
+                  {" "}
+                  <time>Education</time> <label>2023 -Current</label>{" "}
+                </p>
               </div>
             </li>
             <li>
-              <div>
-                <time>1943</time> In mattis elit vitae odio posuere, nec maximus
-                massa varius. Suspendisse varius volutpat mattis. Vestibulum id
-                magna est.
+              <div className="Educa">
+                <p>
+                  {" "}
+                  <time>Education</time> <label>2023 -Current</label>{" "}
+                </p>
               </div>
             </li>
             <li>

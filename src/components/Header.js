@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AvterV from "../assets/imgs/bgRmveVideo.gif";
 import { useState, useEffect } from "react";
 
 import NavbarHead from "./NavbarHead";
@@ -73,6 +74,9 @@ const Header = () => {
             <p class="header-subtitle">FRONTEND WEB DESIGNER</p>
 
             <button class="btn btn-primary">Visit My Works</button>
+          </div>
+          <div className="videoAvter">
+            <img src={AvterV} alt="Avatar GIF" />
           </div>
         </header>
       </div>

@@ -99,8 +99,23 @@ p {
     height: 100%;
     background-image: linear-gradient(to top, #fff 0%, rgba(105, 90, 166, 0.35) 99%, rgba(105, 90, 166, 0.5) 100%);
   }
+/*----Header--*/
+.videoAvter{
+  position: relative;
+  width: 10%;
+  height: 100vh;
 
+}
+.videoAvter img{
+  position: absolute;
+  height: 24rem;
+  width: 24rem;
+  top: 8rem;
+  right: 6rem;
+  z-index: 50;
+}
   .header-content {
+   
     text-align: center;
     margin-top: 20px;
     flex-grow: 1;
@@ -224,11 +239,21 @@ p {
   bottom: 0;
   width: 400px;
   padding: 15px;
-  border-radius: 10px 0px 10px 0px;
-  background: var( --primary-color);
+  border-radius: 20px 0px 20px 0px;
+  outline: 2px solid black;
+
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
+.Educa p {
+  margin: 10px;
+  border-radius: 20px 0px 20px 0px;
+  padding: 1rem;
+  
+  outline: 2px solid black;
+  background: #EEEDDE;
+
+}
 .timeline ul li div::before {
   content: "";
   position: absolute;
@@ -242,22 +267,22 @@ p {
   left: 45px;
 }
 
-.timeline ul li:nth-child(odd) div::before {
+// .timeline ul li:nth-child(odd) div::before {
 
-  left: -15px;
-  border-width: 8px 16px 8px 0;
-  border-color: transparent #518db0 transparent transparent;
-}
+//   left: -15px;
+//   border-width: 8px 16px 8px 0;
+//   border-color: transparent #518db0 transparent transparent;
+// }
 
 .timeline ul li:nth-child(even) div {
   left: -439px;
 }
 
-.timeline ul li:nth-child(even) div::before {
-  right: -15px;
-  border-width: 8px 0 8px 16px;
-  border-color: transparent transparent transparent #518db0;
-}
+// .timeline ul li:nth-child(even) div::before {
+//   right: -15px;
+//   border-width: 8px 0 8px 16px;
+//   border-color: transparent transparent transparent #518db0;
+// }
 
 time {
   display: block;
