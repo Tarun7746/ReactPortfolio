@@ -7,14 +7,15 @@ import "./css/service.scss";
 import Service from "./Service";
 import { useEffect } from "react";
 import FooterHome from "./FooterHome";
+import ResumePDF from "../assets/imgs/first resume.pdf";
 
 const IndexHome = () => {
   //resume Download
   const handleDownloadCV = () => {
-    const pdfUrl = { AboutPic };
+    const pdfUrl = ResumePDF;
     fetch(pdfUrl)
       .then((response) => response.blob())
-      .then((blob) => saveAs(blob, "resume.pdf"))
+      .then((blob) => saveAs(blob, "Tarun Mandal.pdf"))
       .catch((error) => console.error("Error downloading PDF:", error));
   };
 
