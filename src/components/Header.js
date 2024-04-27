@@ -6,56 +6,59 @@ import { useState, useEffect } from "react";
 import NavbarHead from "./NavbarHead";
 
 const Header = () => {
-  const [text, setText] = useState("");
-  const [isTyping, setIsTyping] = useState(true);
-  const typingSpeed = 100; // Speed at which characters are typed
-  const backspaceSpeed = 50; // Backspace speed in milliseconds (faster)
+  const txt = ["i am Tarun"];
+  const [i, setI] = useState(0);
+  const [j, setJ] = useState(0);
+  const [end, setEnd] = useState(false);
+  const [typingDirection, setTypingDirection] = useState("forward");
 
   useEffect(() => {
-    let timeout;
+    const wait = (seconds) => {
+      return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+    };
 
-    const typeWriter = () => {
-      if (isTyping) {
-        timeout = setTimeout(() => {
-          if (text.length < "I am Tarun".length) {
-            setText((prevText) => prevText + "I am Tarun"[text.length]);
-            typeWriter();
-          } else {
-            setIsTyping(false);
-          }
-        }, typingSpeed);
+    const main = async () => {
+      if (i < txt.length) {
+        if (
+          txt[i] &&
+          typingDirection === "forward" &&
+          end === false &&
+          j <= txt[i].length
+        ) {
+          // Auto typing
+          setJ((prevJ) => prevJ + 1);
+        }
+
+        if (typingDirection === "backward" && end === true && j >= 0) {
+          // Backspacing
+          setJ((prevJ) => prevJ - 1);
+        }
+
+        if (txt[i] && j === txt[i].length && typingDirection === "forward") {
+          setEnd(true);
+          await wait(2);
+          setTypingDirection("backward");
+        }
+
+        if (j === 0 && typingDirection === "backward") {
+          setI((prevI) => prevI + 1);
+          setEnd(false);
+          setTypingDirection("forward");
+        }
+      } else {
+        setI(0);
       }
     };
 
-    const backspaceWriter = () => {
-      if (!isTyping && text.length > 0) {
-        timeout = setTimeout(() => {
-          setText((prevText) => prevText.slice(0, -1));
-          backspaceWriter(); // Continue backspacing until text is empty
-        }, backspaceSpeed);
-      } else if (!isTyping && text.length === 0) {
-        setIsTyping(true); // Set typing state to true when backspacing is complete
-        typeWriter(); // Start typing again
-      }
-    };
+    const intervalId = setInterval(() => {
+      main();
+    }, 200);
 
-    document.addEventListener("keydown", handleKeyDown);
+    return () => clearInterval(intervalId);
+  }, [i, j, end, typingDirection]);
 
-    typeWriter();
-
-    // Clean-up function to clear timeout and remove event listener on unmount
-    return () => {
-      clearTimeout(timeout);
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, [text, isTyping]);
-
-  const handleKeyDown = (event) => {
-    if (event.key === "Backspace") {
-      setIsTyping(false);
-    }
-  };
-
+  // Ensure txt[i] is defined before accessing its properties
+  const currentText = txt[i] || "";
   return (
     <>
       <div className="HeadNavv">
@@ -67,11 +70,14 @@ const Header = () => {
           <div class="header-content container">
             <h1 class="header-title">
               <span class="up">HI!</span>
-              <span class="down" id="text-animation">
-                {text}
+              <span class="down">
+                <div id="typed">
+                  {txt[i] && txt[i].substring(0, j)}
+                  <span style={{ opacity: end ? 0 : 1 }}>&nbsp;</span>
+                </div>
               </span>
             </h1>
-            <p class="header-subtitle">FRONTEND WEB DESIGNER</p>
+            <p class="header-subtitle">Web developer</p>
 
             <button class="btn btn-primary">Visit My Works</button>
           </div>

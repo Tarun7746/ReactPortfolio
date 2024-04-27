@@ -18,8 +18,6 @@ function App() {
           <Route path="/" element={<IndexHome />} />
           <Route path="/header" element={<Header />} />
           <Route path="/footer" element={<FooterHome />} />
-
-          {/* <Route path="/tesing" element={<NavbarHead />} /> */}
         </Routes>
       </BrowserRouter>
     </div>
