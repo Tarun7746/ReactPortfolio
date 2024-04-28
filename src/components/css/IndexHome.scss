@@ -199,12 +199,150 @@ p {
 /*-----Education Travelling--*/
 
 .CenterSection{
+
+  padding-top: 2rem;
+
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.SerViceTXt{
+  margin-bottom: -20px;
+}
+.QEX{
+  margin-left: -30px;
+}
+@media (min-width: 100px) and (max-width: 1000px){
+  .CenterSection{
 
+ display: none;
+  }
+  .videoAvter{
+    display: none;
+  }
+  .AboutSectiOnn{
+  
+    z-index: 999
+  }
+}
+@media (min-width: 1000px) and (max-width: 10000px){
+  .CenterSection2{
+
+ display: none;
+  }
+}
+.CenterSection2{
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+   }
+
+/*------Mobile View Education show -----*/
+$primary-color: #02162b;
+$secondary-color: #23576f;
+$prime-color: #00283a;
+$color-white: #fff;
+$color-gray: #515151;
+
+.education-main {
+  margin: 45px;
+  .education-wrap {
+    gap: 85px;
+    padding: 30px;
+    padding-right: 0;
+    position: relative;
+    @media (max-width: 767px) {
+      padding: 20px;
+    }
+    .eduction-iconwrap {
+      min-width: 130px;
+      width: 130px;
+      height: 130px;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: inherit;
+        height: inherit;
+        background-color: $prime-color;
+        transform: rotate(45deg);
+        border-radius: 10px;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 90%;
+        border: 8px solid $prime-color;
+        width: 100%;
+        @media (max-width: 767px) {
+          transform: rotate(90deg);
+          left: 0;
+          top: unset;
+          bottom: -50px;
+        }
+      }
+      .education-icon {
+        color: $color-white;
+        font-size: 45px;
+        // transform: rotate(-45deg);
+        z-index: 2;
+      }
+    }
+    .eduction-detail {
+      background: $prime-color;
+      border-radius: 10px;
+      padding: 35px;
+      color: $color-white;
+      .eduction-detail-head {
+        margin-bottom: 15px;
+        @media (max-width: 767px) {
+          gap: 10px;
+        }
+        .eduction-detail-heading {
+          font-size: 20px;
+          line-height: 30px;
+          margin-bottom: 0;
+          @media (max-width: 767px) {
+            text-align: center;
+          }
+        }
+        .eduction-detail-years {
+          font-size: 16px;
+          line-height: 26px;
+          font-weight: 400;
+          font-style: italic;
+          color: $color-gray;
+        }
+      }
+      .eduction-detail-text {
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        color: $color-gray;
+        @media (max-width: 767px) {
+          text-align: center;
+        }
+      }
+      .eduction-detail-per {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        color: $color-gray;
+        @media (max-width: 767px) {
+          text-align: center;
+        }
+      }
+    }
+  }
+}
 
 /* TIMELINE
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

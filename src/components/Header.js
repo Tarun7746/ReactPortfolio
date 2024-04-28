@@ -14,7 +14,7 @@ const Header = () => {
 
   useEffect(() => {
     const wait = (seconds) => {
-      return new Promise((resolve) => setTimeout(resolve, seconds * 1000));
+      return new Promise((resolve) => setTimeout(resolve, seconds * 10));
     };
 
     const main = async () => {
