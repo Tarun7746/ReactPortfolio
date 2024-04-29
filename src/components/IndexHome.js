@@ -100,6 +100,7 @@ const IndexHome = () => {
         </section>
       </div>
       {/*---Service----*/}
+
       <div className="mobileEdu">
         <EducatinMobile />
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import "./css/MobileEducation.scss";
 
 const EducatinMobile = () => {
   return (
