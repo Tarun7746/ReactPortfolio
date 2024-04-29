@@ -76,6 +76,7 @@ const NavbarHead = () => {
     <div>
       <button
         className={isOpen ? "navbar-toggle active" : "navbar-toggle"}
+        id="menu-toggle"
         onClick={handleToggle}
       ></button>
       <div id="wrapper">

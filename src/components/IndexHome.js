@@ -8,6 +8,7 @@ import Service from "./Service";
 import { useEffect } from "react";
 import FooterHome from "./FooterHome";
 import ResumePDF from "../assets/imgs/first resume.pdf";
+import EducatinMobile from "../components/EducatinMobile";
 
 const IndexHome = () => {
   //resume Download
@@ -99,6 +100,9 @@ const IndexHome = () => {
         </section>
       </div>
       {/*---Service----*/}
+      <div className="mobileEdu">
+        <EducatinMobile />
+      </div>
 
       <div className="CenterSection">
         {" "}
@@ -208,58 +212,7 @@ const IndexHome = () => {
           </ul>
         </section>
       </div>
-      <div className="CenterSection2">
-        <div class="d-flex flex-column education-main w-100">
-          <div class="d-flex flex-column flex-md-row align-items-center education-wrap">
-            <div class="d-flex align-items-center justify-content-center eduction-iconwrap">
-              <i class="fa-solid fa-building-columns education-icon"></i>
-            </div>
 
-            <div class="eduction-detail w-100">
-              <div class="d-flex flex-column flex-md-row align-items-center justify-content-between eduction-detail-head">
-                <h5 class="eduction-detail-heading">School Name</h5>
-                <p class="eduction-detail-years">2014</p>
-              </div>
-              <p class="eduction-detail-text">
-                Secondary Education Board (S.S.C)
-              </p>
-              <p class="eduction-detail-per">Percentage - 66.36%</p>
-            </div>
-          </div>
-          <div class="d-flex flex-column flex-md-row align-items-center education-wrap">
-            <div class="d-flex align-items-center justify-content-center eduction-iconwrap">
-              <i class="fa-solid fa-building-columns education-icon"></i>
-            </div>
-
-            <div class="eduction-detail w-100">
-              <div class="d-flex flex-column flex-md-row align-items-center justify-content-between eduction-detail-head">
-                <h5 class="eduction-detail-heading">School Name</h5>
-                <p class="eduction-detail-years">2016</p>
-              </div>
-              <p class="eduction-detail-text">
-                Higher Secondary Education Board (H.S.C)
-              </p>
-              <p class="eduction-detail-per">Percentage - 69.57%</p>
-            </div>
-          </div>
-          <div class="d-flex flex-column flex-md-row align-items-center education-wrap">
-            <div class="d-flex align-items-center justify-content-center eduction-iconwrap">
-              <i class="fa-solid fa-graduation-cap education-icon"></i>
-            </div>
-
-            <div class="eduction-detail w-100">
-              <div class="d-flex flex-column flex-md-row align-items-center justify-content-between eduction-detail-head">
-                <h5 class="eduction-detail-heading">Collage Name</h5>
-                <p class="eduction-detail-years">2016 - 2019</p>
-              </div>
-              <p class="eduction-detail-text">
-                Bachelors' in Computer Application (BCA)
-              </p>
-              <p class="eduction-detail-per">CGPA - 6.52</p>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="row m-0">
         <Service />
       </div>
