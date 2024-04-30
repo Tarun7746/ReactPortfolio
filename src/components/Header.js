@@ -1,9 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import AvterV from "../assets/imgs/bgRmveVideo.gif";
 import { useState, useEffect } from "react";
-
-import NavbarHead from "./NavbarHead";
+import "./css/Header.scss";
 
 const Header = () => {
   const txt = ["i am Tarun"];
@@ -57,36 +53,64 @@ const Header = () => {
     return () => clearInterval(intervalId);
   }, [i, j, end, typingDirection]);
 
-  // Ensure txt[i] is defined before accessing its properties
   const currentText = txt[i] || "";
   return (
-    <>
-      <div className="HeadNavv">
-        <div className="NavBR">
-          <NavbarHead />
-        </div>
-        <header class="header">
-          <div class="overlay"></div>
-          <div class="header-content container">
-            <h1 class="header-title">
-              <span class="up">HI!</span>
-              <span class="down">
-                <div id="typed">
-                  {txt[i] && txt[i].substring(0, j)}
-                  <span style={{ opacity: end ? 0 : 1 }}>&nbsp;</span>
-                </div>
-              </span>
-            </h1>
-            <p class="header-subtitle">Web developer</p>
+    <div>
+      <div className="MobileNavbar">
+        <nav class="layer">
+          <ul>
+            <li>
+              <label for="pageOne">Home</label>
+            </li>
+            <li>
+              <label for="pageTwo">About</label>
+            </li>
+            <li>
+              <label for="pageThree">Blog</label>
+            </li>
+            <li>
+              <label for="pageFour">Portfolio</label>
+            </li>
+            <li>
+              <label for="pageFive">Contact</label>
+            </li>
+          </ul>
+        </nav>
 
-            <button class="btn btn-primary">Visit My Works</button>
-          </div>
-          <div className="videoAvter">
-            <img src={AvterV} alt="Avatar GIF" />
-          </div>
-        </header>
+        <input type="checkbox" name="hamburger" id="hamburger" />
+        <label for="hamburger">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+        </label>
+        <div class="front layer home   HeaderContent">
+          <section>
+            <div class="header">
+              <div class="overlay"></div>
+              <div class="header-content container m-0 p-0">
+                <h1 class="header-title">
+                  <span class="up">HI!</span>
+                  <span class="down">
+                    <div id="typed">
+                      {txt[i] && txt[i].substring(0, j)}
+                      <span style={{ opacity: end ? 0 : 1 }}>&nbsp;</span>
+                    </div>
+                  </span>
+                </h1>
+                <p class="header-subtitle">Web developer</p>
+
+                <button class="btn btn-primary">Visit My Works</button>
+              </div>
+              <div className="videoAvter">
+                {/* <img src={AvterV} alt="Avatar GIF" /> */}
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 

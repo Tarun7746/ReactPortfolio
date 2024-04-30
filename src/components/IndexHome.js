@@ -1,5 +1,6 @@
 import React from "react";
-import Header from "./Header";
+import Header from "./HeaderReject";
+
 import AboutPic from "../assets/imgs/man.png";
 
 import { saveAs } from "file-saver";
@@ -9,8 +10,10 @@ import { useEffect } from "react";
 import FooterHome from "./FooterHome";
 import ResumePDF from "../assets/imgs/first resume.pdf";
 import EducatinMobile from "../components/EducatinMobile";
-
+import { useState } from "react";
+import ThreeDHeader from "./Header";
 const IndexHome = () => {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   //resume Download
   const handleDownloadCV = () => {
     const pdfUrl = ResumePDF;
@@ -19,6 +22,18 @@ const IndexHome = () => {
       .then((blob) => saveAs(blob, "Tarun Mandal.pdf"))
       .catch((error) => console.error("Error downloading PDF:", error));
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     const items = document.querySelectorAll(".timeline li");
@@ -53,9 +68,12 @@ const IndexHome = () => {
       window.removeEventListener("scroll", callbackFunc);
     };
   }, []);
+
   return (
     <div>
-      <Header />
+      <ThreeDHeader />
+      {/* <Header /> */}
+
       <div className="AboutSectiOnn">
         <section class="section pt-0" id="about">
           <div class="container text-center">
@@ -100,10 +118,11 @@ const IndexHome = () => {
         </section>
       </div>
       {/*---Service----*/}
-
-      <div className="mobileEdu">
-        <EducatinMobile />
-      </div>
+      {windowWidth < 700 && (
+        <div className="mobileEdu">
+          <EducatinMobile />
+        </div>
+      )}
 
       <div className="CenterSection">
         {" "}

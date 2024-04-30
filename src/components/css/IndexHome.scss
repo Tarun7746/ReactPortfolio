@@ -83,16 +83,16 @@ p {
 }
 
 .header {
-  position: relative;
-  height: 100vh;
-  min-height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../../assets/imgs/header.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  // position: relative;
+  // height: 100vh;
+  // min-height: 600px;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // background-image: url(../../assets/imgs/header.jpg);
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center center;
 
   .overlay {
     position: absolute;
@@ -117,47 +117,7 @@ p {
   right: 6rem;
   z-index: 50;
 }
-  .header-content {
-   
-    text-align: center;
-    margin-top: 20px;
-    flex-grow: 1;
-    max-width: 550px;
-
-    .header-title {
-      .up {
-        font-size: calc(30px + (60 - 30) * ((100vw - 300px) / (1300 - 300)));
-        font-weight: 500;
-    
-        color: var(--black-color);
-        margin-bottom: 5px;
-        position: relative;
-        display: block;
-      }
-
-      .down {
-        font-size: calc(30px + (75 - 30) * ((100vw - 300px) / (1300 - 300)));
-        margin-bottom: 0;
-        position: relative;
-        display: block;
-      }
-    }
-
-    .header-subtitle {
-      font-size: calc(10px + (22 - 10) * ((100vw - 300px) / (1300 - 300)));
-      letter-spacing: calc(1px + (7 - 1) * ((100vw - 300px) / (1300 - 300)));
-      opacity: 0.8;
-      margin-top: -10px;
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      position: relative;
-      margin-top: 20px;
-      border-radius: 20px;
-      padding: 8px 15px;
-    }
-  }
+  
 }
 
 .about {
@@ -224,7 +184,7 @@ p {
   }
   .AboutSectiOnn{
   
-    z-index: 999
+    z-index: 999;
   }
 }
 
