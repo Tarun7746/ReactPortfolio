@@ -161,7 +161,7 @@ input[type="checkbox"]:checked#hamburger + label > ul > li:last-child {
 }
 
 .layer li label {
-  transition: all .6s cubic-bezier(0,0,.23,1);
+  transition: all 0.80s cubic-bezier(0,0,.23,1);
   font-family: "Baloo Paaji", cursive;
     text-decoration: none;
     -webkit-background-clip: text;
