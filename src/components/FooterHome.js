@@ -1,8 +1,21 @@
 import React from "react";
-import "./css/foooter.css";
+import "./css/foooter.scss";
 import GitIcn from "../assets/imgs/gitHubPng.png";
+import { useState } from "react";
 
 const FooterHome = () => {
+  const [isClicked, setIsClicked] = useState(false);
+  const [isValidating, setIsValidating] = useState(false);
+  const handleClick = () => {
+    setIsClicked(true);
+    setTimeout(() => {
+      setIsClicked(false);
+      setIsValidating(true);
+      setTimeout(() => {
+        setIsValidating(false);
+      }, 1250);
+    }, 2250);
+  };
   return (
     <div>
       <footer class="new_footer_area bg_color">
@@ -28,15 +41,29 @@ const FooterHome = () => {
                     noValidate={true}
                     _lpchecked="1"
                   >
-                    <input
-                      type="text"
-                      name="EMAIL"
-                      className="form-control memail"
-                      placeholder="Email"
-                    />
-                    <button className="btn btn_get btn_get_two" type="submit">
-                      Subscribe
-                    </button>
+                    <div class="input-container">
+                      <div className="d-flex  ">
+                        <input
+                          type="text"
+                          name="EMAIL"
+                          class="form-control memail"
+                          placeholder="Email"
+                        />
+
+                        <button
+                          id="button"
+                          className={`submitBtn ${
+                            isClicked
+                              ? "onclic"
+                              : isValidating
+                              ? "validate"
+                              : ""
+                          }`}
+                          onClick={handleClick}
+                        ></button>
+                      </div>
+                    </div>
+
                     <p
                       className="mchimp-errmessage"
                       style={{ display: "none" }}
@@ -80,9 +107,6 @@ const FooterHome = () => {
                     animationName: "fadeInLeft",
                   }}
                 >
-                  <h3 class="f-title f_600 t_color f_size_18">
-                    Team Solutions
-                  </h3>
                   <div class="f_social_icon">
                     <a
                       href="https://www.linkedin.com/in/tarun-mandal-541a6b237/"
