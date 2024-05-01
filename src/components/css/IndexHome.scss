@@ -38,61 +38,9 @@ p {
 }
 
 // Components
-.service-card {
-  position: relative;
-  min-height: 230px;
-  border: 1px solid #dee2e6;
-  overflow: hidden;
-  border-radius: 3px;
 
-  .body {
-    padding: 5px;
-
-    img.icon {
-      margin-top: 40px;
-      width: 55px;
-      margin-bottom: 25px;
-      @include transition(all);
-    }
-
-    .subtitle {
-      position: absolute;
-      bottom: -100%;
-      opacity: 0;
-      visibility: hidden;
-      @include transition(all);
-    }
-  }
-
-  &:hover {
-    .body img.icon {
-      margin-top: 5px;
-      width: 45px;
-      margin-bottom: 15px;
-    }
-
-    .body .subtitle {
-      bottom: 7px;
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-}
-.wlcTxt{
-  background-color: red !important;
-}
-
-.header {
-  // position: relative;
-  // height: 100vh;
-  // min-height: 600px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // background-image: url(../../assets/imgs/header.jpg);
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-position: center center;
+ 
+ 
 
   .overlay {
     position: absolute;
@@ -118,10 +66,12 @@ p {
   z-index: 50;
 }
   
-}
+/*---------About Section------------*/
 
 .about {
   display: flex;
+  justify-content:center ;
+
   align-items: center;
   text-align: left;
 
@@ -200,12 +150,6 @@ p {
 
 }
 
-.CenterSection2{
-
-  display:flex;
-  justify-content: center;
-  align-items: center;
-   }
 
 
 /* TIMELINE
@@ -272,22 +216,12 @@ p {
   left: 45px;
 }
 
-// .timeline ul li:nth-child(odd) div::before {
 
-//   left: -15px;
-//   border-width: 8px 16px 8px 0;
-//   border-color: transparent #518db0 transparent transparent;
-// }
 
 .timeline ul li:nth-child(even) div {
   left: -439px;
 }
 
-// .timeline ul li:nth-child(even) div::before {
-//   right: -15px;
-//   border-width: 8px 0 8px 16px;
-//   border-color: transparent transparent transparent #518db0;
-// }
 
 time {
   display: block;
