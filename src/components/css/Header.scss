@@ -82,13 +82,13 @@ label[for="hamburger"] {
   right: 5px;
   height: 50px;
   width: 50px;
-  background: #2F9AA9;
+  // background: #2F9AA9;
   z-index: 50;
   cursor: pointer;
   border-top-left-radius: 50%;
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
-  box-shadow: 1px 2px 5px #464647;
+  // box-shadow: 1px 2px 5px #464647;
 }
 
 label[for="hamburger"] > ul {
@@ -160,6 +160,26 @@ input[type="checkbox"]:checked#hamburger + label > ul > li:last-child {
   
 }
 
+.layer li label {
+  transition: all .6s cubic-bezier(0,0,.23,1);
+  font-family: "Baloo Paaji", cursive;
+    text-decoration: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(90deg,#ff4d01,#ff4d01 50%,#080808 0);
+    background-size: 200% 100%;
+    background-position: 100%;
+    font-size: 1.2rem;
+    color: #080808;
+    text-align: left;
+    font-weight: 800;
+    letter-spacing: 3px;
+  &:hover {
+        background-position: 0;
+    color: #ff4d01;
+  }
+}
+
 nav {
 
   vertical-align: center;
@@ -168,7 +188,7 @@ nav {
 nav ul {
   padding-left: 43%;
   font-size: larger;
-  line-height: 2;
+  line-height: 1.8;
 }
 
 ul li {
